@@ -3,7 +3,7 @@
 
 **ONLY for DEV, not for production**
 
-A very simple Docker-compose to discover Symfony 6 with PHP 8.0.13 in 5 minutes
+A very simple Docker-compose to discover Symfony 5 with PHP 8.0.13 in 5 minutes
 ## Run Locally
 
 Clone the project
@@ -58,6 +58,3 @@ Out of the box, this docker-compose is designed for a Linux operating system, pr
 - Linux (Ubuntu 20.04 or other)
 - Docker
 - Docker-compose
-
-
-
