@@ -9,20 +9,20 @@ A very simple Docker-compose to discover Symfony 6 with PHP 8.0.13 in 5 minutes
 Clone the project
 
 ```bash
-  git@github.com:yoanbernabeu/symfony6-php8-in-docker-compose.git
+ git@github.com:gaoubak/docker-symfony-build.git
 ```
 
 Run the docker-compose
 
 ```bash
-  docker-compose build
+  docker compose build --no-cache --pull
   docker-compose up -d
 ```
 
 Log into the PHP container
 
 ```bash
-  docker exec -it php8-sf6 bash
+  docker exec -it  nom-du-container bash
 ```
 
 Create your Symfony application and launch the internal server
@@ -33,19 +33,10 @@ Create your Symfony application and launch the internal server
   symfony serve -d
 ```
 
-Create an account (identical to your local session)
-
-```bash
-  adduser username
-  chown username:username -R .
-```
-
-*Your application is available at http://127.0.0.1:9000*
-
 If you need a database, modify the .env file like this example:
 
 ```yaml
-  DATABASE_URL="postgresql://symfony:ChangeMe@database:5432/app?serverVersion=13&charset=utf8"
+ DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8&charset=utf8mb4"
 ```
 
 ## Ready to use with
@@ -55,9 +46,8 @@ This docker-compose provides you :
 - PHP-8.0.13-cli (Debian)
     - Composer
     - Symfony CLI
-    - and some other php extentions
+    - pdo pdo_mysql pdo_pgsql opcache intl zip calendar dom mbstring gd xsl
     - nodejs, npm, yarn
-- postgres:13-alpine
 - mailcatcher
 
 
@@ -68,6 +58,6 @@ Out of the box, this docker-compose is designed for a Linux operating system, pr
 - Linux (Ubuntu 20.04 or other)
 - Docker
 - Docker-compose
-## Author
+
 
 
