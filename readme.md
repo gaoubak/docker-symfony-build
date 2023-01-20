@@ -33,7 +33,7 @@ Create your Symfony application and launch the internal server
   symfony serve -d
 ```
 
-If you need a database, create a file .env.local file like this example:
+If you need a database, create a file .env.local and add a line like this example:
 
 ```yaml
  DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8&charset=utf8mb4"
